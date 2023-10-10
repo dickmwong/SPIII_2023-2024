@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!-- KaTeX requires the use of the HTML5 doctype. Without it, KaTeX may not render properly -->
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
+
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+
+  </head>
+ 
+ 
+<h1>Stochastic Processes III: Assignment 1</h1>
+<h2>Due date: 2pm on Friday 27th October 2023</h2>
+<body>
+<p> Q1. A bird lays \(N\) eggs, each being pink with probability \(p\) and blue otherwise. Assuming that \(N\sim\mathrm{Poisson}(\lambda)\), find the probability distribution of the total number of pink eggs \(N_{1}\).
+</p>
+
+
+
+<p> Q2. Establish the conditional monotone convergence theorem using the definition of abstract conditional expectation: 
+let \(X_n\) be a sequence of non-negative random variables such that \(X_n \le X_{n+1}\) almost surely for all \(n \in \mathbb{N}\), and \(X = \lim_{n \to \infty} X_n\) be integrable, then for any sub-\(\sigma\)-algebra \(\mathcal{G}\) we have
+\[\begin{equation*}
+\lim_{n \to \infty} \mathbb{E}[X_n | \mathcal{G}] = \mathbb{E}[X|\mathcal{G}]\qquad a.s.
+\end{equation*}\]
+
+Hint: 
+<ul>
+<li> First explain why \(0 \le \mathbb{E}[X_n | \mathcal{G}] \le \mathbb{E}[X_{n+1} | \mathcal{G}]\) for every \(n\). (This is important because it shows, in particular, that \(\lim_{n \to \infty} \mathbb{E}[X_n | \mathcal{G}]\) exists almost surely as a monotone limit.) </li>
+
+<li> Conclude the proof by showing that \(\lim_{n \to \infty} \mathbb{E}[X_n | \mathcal{G}]\) is equal to  \(\mathbb{E}[X|\mathcal{G}]\) using the definition of abstract conditional expectation, i.e.
+\[\begin{equation*}
+\mathbb{E}\left[ \left(\lim_{n \to \infty} \mathbb{E}[X_n | \mathcal{G}]\right) 1_A\right]
+= \mathbb{E}\left[ \left( \mathbb{E}[X|\mathcal{G}]\right) 1_A\right] \qquad \forall A \in \mathcal{G}.
+\end{equation*}\]</li>
+</ul>
+</p>
+
+
+<p>
+Q3. Consider the Gaussian vector
+\[
+\begin{equation*}
+\begin{pmatrix}
+X_1 \\ X_2 \end{pmatrix}
+\sim \mathcal{N} \left(\begin{pmatrix} \mu_1\\ \mu_2\end{pmatrix}, \begin{pmatrix} \sigma_1^2 & \sigma_{12} \\ \sigma_{12} & \sigma_2^2\end{pmatrix}\right)
+\end{equation*}
+\]
+
+where \(\mu_1, \mu_2, \sigma_1, \sigma_{12}, \sigma_2 \in \mathbb{R}\) are some parameters. Find \(\mathbb{E}[e^{tX_1} | X_2]\).
+
+Hint: this can be broken into 3 steps.
+<ul>
+<li> Find a constant \(c \in \mathbb{R}\) such that \(\widetilde{X_1} := X_1 - cX_2\) satisfies \(\mathrm{Cov}(\widetilde{X_1}, X_2) = 0\).</li>
+<li> Recall the moment generating function of \((X_1, X_2)\), and show that \(\widetilde{X}_1\) is independent of \(X_2\).</li>
+<li> Using basic properties of (abstract) conditional expectation and evaluate the desired quantity.</li>
+</ul>
+</p>
+
+
+
+</body>
+</html>
