@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!-- KaTeX requires the use of the HTML5 doctype. Without it, KaTeX may not render properly -->
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
+
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+
+  </head>
+ 
+ 
+<h1>Stochastic Processes III: Assignment 2</h1>
+<h2>(Version: 25th October 2023)</h2>
+<h2>Due date: 12pm on Monday 6th November 2023</h2>
+<body>
+<p> Q1. 
+<ol type="a">
+	<li> Calculate the extinction probability for the following branching processes (starting with one individual at time \(0\)): </li>
+	<ol type="i">
+		<li>the process with a Binomial\((2,2/3)\) offspring distribution;</il>
+		<li>the process with offspring distribution given by \(p_j=2^{-(j+1)}\) for \(j\ge 0\);</il>
+		<li>the process with generating function \(\varphi(s)=s\). </il>
+	</ol>
+	
+	<li> Calculate the function \(\varphi_n(s)=\mathbb{E}[s^{Z_n}]\) for general \(n\) for the offspring distribution in (ii).</li>
+</ol>
+</p>
+
+
+
+<p> Q2. We call an event \(A\) for a branching proces \((Z_n)_{n \ge 0}\) "inherited" if
+<ul>
+	<li> \(\{\)extinction\(\} = E \subset A\); and </li>
+	<li> whenever \(A\) occurs, it must also occur for each of the sub-processes starting from each individual in generation \(1\). </li>
+</ul>
+
+For example, \(E\) itself is "inherited" because if the process goes extinct, so must each subprocess starting from each individual in generation \(1\).
+<ol type ="a">
+	<li> Is the event \(\{\lim_{n \to \infty} Z_n/a^n = 0\}\) inherited for \(a > 0\)? What about \(\{\lim_{n\to\infty} Z_n/n^n = 0\}\)? </li>
+	<li> Show that if \(A\) is inherited then \(\phi(\mathbb{P}(A)) \ge \mathbb{P}(A)\), and deduce that \(\mathbb{P}(A)\) must be equal to \(\rho\) or \(1\). </li>
+</o>
+</p>
+
+
+
+
+</body>
+</html>
