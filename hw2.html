@@ -15,7 +15,7 @@
  
  
 <h1>Stochastic Processes III: Assignment 2</h1>
-<h2>(Version: 25th October 2023)</h2>
+<h2>(Version: 27th October 2023)</h2>
 <h2>Due date: 12pm on Monday 6th November 2023</h2>
 <body>
 <p> Q1. 
@@ -35,11 +35,11 @@
 
 <p> Q2. We call an event \(A\) for a branching proces \((Z_n)_{n \ge 0}\) "inherited" if
 <ul>
-	<li> \(\{\)extinction\(\} = E \subset A\); and </li>
+	<li> \(\{\)extinction\(\} = \mathcal{E} \subset A\); and </li>
 	<li> whenever \(A\) occurs, it must also occur for each of the sub-processes starting from each individual in generation \(1\). </li>
 </ul>
 
-For example, \(E\) itself is "inherited" because if the process goes extinct, so must each subprocess starting from each individual in generation \(1\).
+For example, \(\mathcal{E}\) itself is "inherited" because if the process goes extinct, so must each subprocess starting from each individual in generation \(1\).
 <ol type ="a">
 	<li> Is the event \(\{\lim_{n \to \infty} Z_n/a^n = 0\}\) inherited for \(a > 0\)? What about \(\{\lim_{n\to\infty} Z_n/n^n = 0\}\)? </li>
 	<li> Show that if \(A\) is inherited then \(\phi(\mathbb{P}(A)) \ge \mathbb{P}(A)\), and deduce that \(\mathbb{P}(A)\) must be equal to \(\rho\) or \(1\). </li>
