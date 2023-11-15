@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!-- KaTeX requires the use of the HTML5 doctype. Without it, KaTeX may not render properly -->
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
+
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+
+  </head>
+ 
+ 
+<h1>Stochastic Processes III: Assignment 2</h1>
+<h2>(Version: 15th November 2023)</h2>
+<h2>Due date: 12pm on Monday 27th November 2023</h2>
+<body>
+<p> Q1. Define \(\widehat{m}(u) := \mathbb{E}\left[ \sum_{n \ge 0} e^{-u S_n}\right] = \sum_{n \ge 0} \mathbb{E}\left[ e^{-u S_n}\right]\). Assuming that \(\mathbb{P}(X_k = 0) < 1\), explain why \(\widehat{m}(u) < \infty\) for every \(u > 0\), and show that
+$$\lim_{u\to 0^+} u \widehat{m}(u) = \frac{1}{\mu}.$$
+
+(Hint: express \(\widehat{m}(u)\) in terms of \(\mathbb{E}[e^{-u S_0}]\) and \(\mathbb{E}[e^{-u X}]\) where \(X\) has the same distribution as the i.i.d. increments \((X_n)_{n \ge 0}\).)
+</p>
+
+
+
+<p> Q2.
+Suppose \((M(t))_{t \ge 0}\) is a zero-delayed renewal process with a continuous distribution \(F_X\) for interarrival times (i.e. \(F_X(x) = \int_0^x f_X(s) ds\) for some probability density function \(f_X(\cdot)\)). 
+<ol type ="a">
+	<li> Show that for any \(t \ge 0\), the function \(H(t) = m(t) - \frac{t}{\mu}\) satisfies
+$$H(t) = h(t) + \int_0^t H(t-s) f_X(s)ds \qquad \left(\text{or equivalently} \quad H(t) = h(t) + \mathbb{E}[H(t-X)]\right)$$
+for any \(t \ge 0\), where \(h(t) =\frac{1}{\mu}\int_t^\infty [1-F_X(s)]ds\).
+</li>
+	<li>
+	Find \(H(t)\) when the interarrival times follow \(\mathrm{Exp}(1/\mu)\) distribution.
+	 </li>
+</ol>
+</p>
+
+<p> Q3. Consider the experiment of repeatedly tossing a biased coin which has probability \(p \in (0, 1)\) to land on \(\mathrm{H}\). Find the expected time for the first occurence of the following patterns:
+<ol type ="a">
+	<li> \(\mathrm{HTTH}\).</li>
+	<li> \(\mathrm{HTHTH}\).</li>
+</o>
+</p>
+
+
+
+
+</body>
+</html>
