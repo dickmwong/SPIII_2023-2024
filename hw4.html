@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!-- KaTeX requires the use of the HTML5 doctype. Without it, KaTeX may not render properly -->
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
+
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+
+  </head>
+ 
+ 
+<h1>Stochastic Processes III: Assignment 4</h1>
+<h2>(Version: 24th November 2023)</h2>
+<h2>Due date: 12pm on Monday 4th December 2023</h2>
+<body>
+<p> Q1. Let \((X_n)_{n\ge 1}\) and \((Y_n)_{n\ge 1}\) be two (homogeneous) branching processes starting from \(X_0=1, Y_0=1\), and such that \(X_1 \le_{\mathrm{st}} Y_1\). Show that \(X_n \le_{\mathrm{st}} Y_n\) for all \(n\ge 0\).
+</p>
+
+
+
+<p> Q2.
+Recall that the total variation distance between two random variables \(X\) and \(Y\) is defined as
+$$
+d_{\mathrm{TV}}(X, Y) 
+:= d_{\mathrm{TV}}(\mu_X, \mu_Y)
+:= \sup_{A} |\mu_X(A) - \mu_X(Y)| = \sup_A |\mathbb{P}(X \in A) - \mathbb{P}(Y \in A)|.
+$$
+
+<ol type ="a">
+	<li> Check that \(d_{\mathrm{TV}}\) is non-negative, symmetric (i.e. \(d_{\mathrm{TV}}(X,Y)=d_{\mathrm{TV}}(Y,X)\)) and satisfies the triangle inequality (i.e. \(d_{\mathrm{TV}}(X,Z)\le d_{\mathrm{TV}}(X,Y)+d_{\mathrm{TV}}(Y,Z)\) for any random variables \(X, Y, Z\)).
+
+</li>
+	<li>
+	Let \(X\) and \(Y\) be integer-valued random variables with probability mass functions \(\{p_k\}_{k \in \mathbb{Z}}\) and \(\{q_k\}_{k \in \mathbb{Z}}\) respectively. Show that the equalities 
+$$
+d_{\mathrm{TV}}(X,Y)
+=\frac{1}{2}\sum_{k\in \mathbb{Z}}|p_k-q_k|
+=\sum_{k\in \mathbb{Z}} (p_k-\min(p_k,q_k))
+=\sum_{k\in \mathbb{Z}} (q_k-\min(p_k,q_k))
+$$
+
+hold.
+	 </li>
+</ol>
+</p>
+
+
+
+</body>
+</html>
